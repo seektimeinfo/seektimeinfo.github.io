@@ -1,9 +1,13 @@
 <html>
 <head>
 <script type="text/javascript">
-if (document.location.protocol == 'http:') {
-    document.location.href = document.location.href.replace('http:', 'https:');
-}
+(function () {
+  var currURL = document.URL;
+  if (currURL.match('seektime.info')) {
+    var redirURL = currURL.replace('seektime.info', 'www.seektime.info');
+    document.location.replace(redirURL);
+  }
+}());
 </script>
 </head>
 <body>
